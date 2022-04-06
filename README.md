@@ -1,10 +1,12 @@
 <h1>Todo List Project</h1>
 
+* Production - https://nataliapylypenko.github.io/todo-list/
+
 ## Build Setup:
 
 ``` bash
 # Download repository:
-git clone ...
+git clone https://github.com/NataliaPylypenko/todo-list.git
 
 # Install dependencies:
 npm install
