@@ -42,6 +42,31 @@
 
     </ul>
   </div>
+  <div class="container">
+    <div class="d-flex justify-content-end">
+        <form class="form-inline d-flex mb-20 create-form" action="#" id="create-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" placeholder="Enter name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="category">Category list:</label>
+                <select class="form-control" id="category">
+                    <option value="Task">Task</option>
+                    <option value="Random Thought">Random Thought</option>
+                    <option value="Idea">Idea</option>
+                    <option value="Random">Quote</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <input type="text" class="form-control" placeholder="Enter content" id="content">
+            </div>
+
+            <button type="submit" id="createNote"  class="btn btn-secondary create-note">Create Note</button>
+        </form>
+    </div>
+  </div>
 
 </div>
 

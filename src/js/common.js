@@ -1,18 +1,14 @@
 // JS
 
-import table from "./modules/topTable";
+import getTaskList from "./modules/getTaskList";
+import addTaskRow from "./modules/addTaskRow";
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    table();
+    getTaskList();
+    addTaskRow();
 
 });
 
-
 // SCSS
 import '../scss/style.scss'
-import topTable from "./modules/topTable";
-
-
-// Bootstrap
-// import 'bootstrap/web/css/bootstrap.min.css'

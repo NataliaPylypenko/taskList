@@ -6,7 +6,7 @@
 .table-container {
   display: flex;
   flex-flow: column nowrap;
-  margin: 50px 0;
+  margin: 50px 0 20px;
   .table-row {
     display: flex;
     flex-flow: row nowrap;
@@ -21,6 +21,7 @@
       flex: 1;
       font-size: 14px;
       align-items: center;
+      padding: 0 5px;
       i {
         color: lighten($dark-grey, 30%);
         font-size: 17px;
@@ -53,12 +54,31 @@
   }
 }
 
+.create-note {
+  margin-top: auto;
+}
+.create-form > div {
+  margin-right: 20px;
+}
 .flex-inherit {
   flex: inherit!important;
+}
+.mb-20 {
+  margin-bottom: 20px;
 }
 .w-45 {
   width: 45px;
 }
 .w-105 {
   width: 105px;
+}
+.list {
+  .save {
+    display: none;
+  }
+}
+.save {
+  .pen, .plus {
+    display: none;
+  }
 }
