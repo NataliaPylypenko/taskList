@@ -2,10 +2,10 @@ import {dateParser, getCategoryIcon} from "./functions";
 
 function displayTaskList(taskItem) {
 
-    const parent = document.querySelector('.container .table-container');
+    const parent = document.querySelector('.table-container .content');
 
-    const element = document.createElement('li');
-    element.classList.add('table-row');
+    const element = document.createElement('div');
+    element.classList.add('table-row','note-item');
 
     element.innerHTML = `
       <div class="row-item flex-inherit w-45">
@@ -18,12 +18,11 @@ function displayTaskList(taskItem) {
       <span class="row-item">${taskItem.category}</span>
       <span class="row-item">${taskItem.content}</span>
       <span class="row-item">${dateParser(taskItem.content)}</span>
-
-        
+      
       <div class="row-item flex-item flex-inherit w-105 d-flex justify-content-end align-items-center">
-         <button type="button" class="btn-star btn-sm pen"><i class="fas fa-pen"></i></button>
-         <button type="button" class="btn-star btn-sm plus"><i class="fas fa-folder-plus"></i></button>
-         <button type="button" class="btn-trash btn-sm trash"><i class="fas fa-trash"></i></button>
+         <button type="button" data-id="${taskItem.id}" class="btn-star btn-sm btn-edit"><i class="fas fa-pen"></i></button>
+         <button type="button" data-id="${taskItem.id}" class="btn-star btn-sm btn-arhive"><i class="fas fa-folder-plus"></i></button>
+         <button type="button" data-id="${taskItem.id}" class="btn-trash btn-sm btn-del"><i class="fas fa-trash"></i></button>
       </div>
     `;
 

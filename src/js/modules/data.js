@@ -1,4 +1,4 @@
-const taskList = [
+const startTaskList = [
     {
         id: "pblbb6",
         created: "April 20, 2021",
@@ -51,6 +51,8 @@ const taskList = [
 
 ];
 
+const taskList = [...startTaskList];
+
 const categoryIcon = [
     {
         name: 'Task',
@@ -70,7 +72,9 @@ const categoryIcon = [
     }
 ];
 
-const controls = ['name', 'content', 'category'];
+const controls = ['id', 'name', 'category', 'content'];
+
+
 
 
 export {taskList, categoryIcon, controls};
