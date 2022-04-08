@@ -4,6 +4,9 @@ import displayTaskList from "./displayTaskList";
 import moment from 'moment';
 import getTaskList from "./getTaskList";
 import editTaskRow from "./editTaskRow";
+import delTaskRow from "./delTaskRow";
+import arhiveTaskRow from "./arhiveTaskRow";
+import unarhiveTasks from "./unarhiveTasks";
 
 function addTaskRow() {
 
@@ -25,6 +28,7 @@ function addTaskRow() {
             const taskItemEdit = {
                 ...formData,
                 created: taskList[idx]['created'],
+                status: taskList[idx]['status'],
             };
             taskList[idx] = taskItemEdit;
 
@@ -34,14 +38,19 @@ function addTaskRow() {
                 ...formData,
                 id: getRandomId(),
                 created: moment().format('MMMM DD, YYYY'),
+                status: "active"
             };
             taskList.push(taskItemAdd);
+
 
             displayTaskList(taskItemAdd);
         }
 
         form.reset();
         editTaskRow();
+        delTaskRow();
+        arhiveTaskRow();
+        unarhiveTasks();
     })
 
 }

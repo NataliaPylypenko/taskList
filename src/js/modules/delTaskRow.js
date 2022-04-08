@@ -1,5 +1,4 @@
-import {controls, taskList} from "./data";
-import getTaskList from "./getTaskList";
+import {taskList} from "./data";
 
 function delTaskRow() {
 

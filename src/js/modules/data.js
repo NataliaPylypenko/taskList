@@ -5,6 +5,7 @@ const startTaskList = [
         name: "Shopping list",
         category: "Task",
         content: "Tomatoes, bread",
+        status: "active"
     },
     {
         id: "fkxu5b",
@@ -12,6 +13,7 @@ const startTaskList = [
         name: "The theory of evolution",
         category: "Random Thought",
         content: "The theory of evolution",
+        status: "active"
     },
     {
         id: "ku8ix9",
@@ -19,6 +21,7 @@ const startTaskList = [
         name: "New Feature",
         category: "Idea",
         content: "I’m gonna have a dentist appointment on the 3/5/2021, I moved it from 5/5/2021",
+        status: "active"
     },
     {
         id: "rp9efl",
@@ -26,6 +29,7 @@ const startTaskList = [
         name: "William Gaddis",
         category: "Quote",
         content: "Power doesn't could",
+        status: "active"
     },
     {
         id: "axk4e5",
@@ -33,6 +37,7 @@ const startTaskList = [
         name: "Books",
         category: "Task",
         content: "The learn poem",
+        status: "active"
     },
     {
         id: "56ua0r",
@@ -40,6 +45,7 @@ const startTaskList = [
         name: "New Feature",
         category: "Idea",
         content: "I’m gonna have a dentist appointment on the 3/5/2021, I moved it from 5/5/2021",
+        status: "active"
     },
     {
         id: "i1mg24",
@@ -47,6 +53,7 @@ const startTaskList = [
         name: "William Gaddis",
         category: "Quote",
         content: "Power doesn't could",
+        status: "active"
     },
 
 ];
