@@ -2,10 +2,10 @@ import {dateParser, getCategoryIcon} from "./functions";
 
 function displayTaskList(taskItem) {
 
-    const parent = document.querySelector('.table-container .content');
+    const parent = document.querySelector('.table-main .content');
 
     const element = document.createElement('div');
-    element.classList.add('table-row','note-item');
+    element.classList.add('table-row','note-item', taskItem.status);
 
     element.innerHTML = `
       <div class="row-item flex-inherit w-45">

@@ -3,6 +3,7 @@ import getTaskList from "./getTaskList";
 import editTaskRow from "./editTaskRow";
 import delTaskRow from "./delTaskRow";
 import arhiveTaskRow from "./arhiveTaskRow";
+import getPivotTable from "./getPivotTable";
 
 function unarhiveTasks() {
 
@@ -12,14 +13,13 @@ function unarhiveTasks() {
 
         taskList.forEach(taskItem => {
             taskItem['status'] = 'active'
-
-            console.log(taskItem)
         });
 
         getTaskList()
         editTaskRow();
         delTaskRow();
         arhiveTaskRow();
+        getPivotTable();
 
     })
 

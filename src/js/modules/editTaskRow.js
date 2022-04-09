@@ -2,6 +2,11 @@ import {controls, taskList} from "./data";
 
 function editTaskRow() {
 
+    // document.querySelector('.table-main')
+    //     .addEventListener('click', (e) => {
+    //         console.log('clicked');
+    //     })
+
     document.querySelectorAll('.btn-edit')
         .forEach(btnEdit => {
 
@@ -9,7 +14,7 @@ function editTaskRow() {
 
                 const idx = taskList.findIndex(elem => elem.id === e.currentTarget.dataset.id);
 
-                if(idx !== -1)  {
+                if (idx !== -1) {
                     const form = document.getElementById('create-form');
 
                     controls.forEach(control => {

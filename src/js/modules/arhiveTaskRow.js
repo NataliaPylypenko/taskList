@@ -1,4 +1,5 @@
 import {taskList} from "./data";
+import getPivotTable from "./getPivotTable";
 
 function arhiveTaskRow() {
 
@@ -9,12 +10,16 @@ function arhiveTaskRow() {
         btnArhive.addEventListener('click', e => {
 
             const idx = taskList.findIndex(elem => elem.id === e.currentTarget.dataset.id);
-            if(idx !== -1) taskList[idx]['status'] = 'unactive';
+            if(idx !== -1) taskList[idx]['status'] = 'archived';
 
-            e.currentTarget.closest('.note-item').classList.add('note-arhive');
-            console.log(taskList);
+            e.currentTarget.closest('.note-item').classList.add('archived');
+            e.currentTarget.closest('.note-item').classList.remove('active');
+
+            getPivotTable();
         })
     })
+
+
 }
 
 export default arhiveTaskRow;

@@ -7,6 +7,8 @@ import editTaskRow from "./modules/editTaskRow";
 import arhiveTaskRow from "./modules/arhiveTaskRow";
 import unarhiveTasks from "./modules/unarhiveTasks";
 
+import getPivotTable from "./modules/getPivotTable";
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -15,7 +17,9 @@ window.addEventListener('DOMContentLoaded', () => {
     delTaskRow();
     editTaskRow();
     arhiveTaskRow();
-    unarhiveTasks()
+    unarhiveTasks();
+
+    getPivotTable();
 
 });
 
