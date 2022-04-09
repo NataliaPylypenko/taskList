@@ -1,6 +1,6 @@
 import {dateParser, getCategoryIcon} from "./functions";
 
-function displayTaskList(taskItem) {
+function renderTaskItem(taskItem) {
 
     const parent = document.querySelector('.table-main .content');
 
@@ -21,7 +21,7 @@ function displayTaskList(taskItem) {
       
       <div class="row-item flex-item flex-inherit w-105 d-flex justify-content-end align-items-center">
          <button type="button" data-id="${taskItem.id}" class="btn-star btn-sm btn-edit"><i class="fas fa-pen"></i></button>
-         <button type="button" data-id="${taskItem.id}" class="btn-star btn-sm btn-arhive"><i class="fas fa-folder-plus"></i></button>
+         <button type="button" data-id="${taskItem.id}" class="btn-star btn-sm btn-archive"><i class="fas fa-folder-plus"></i></button>
          <button type="button" data-id="${taskItem.id}" class="btn-trash btn-sm btn-del"><i class="fas fa-trash"></i></button>
       </div>
     `;
@@ -29,4 +29,4 @@ function displayTaskList(taskItem) {
     parent.append(element);
 };
 
-export default displayTaskList;
+export default renderTaskItem;

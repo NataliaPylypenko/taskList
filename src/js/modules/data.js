@@ -60,6 +60,8 @@ const startTaskList = [
 
 const taskList = [...startTaskList];
 
+const categories = ['Task', 'Random Thought', 'Idea', 'Quote'];
+
 const categoryIcon = [
     {
         name: 'Task',
@@ -84,4 +86,4 @@ const controls = ['id', 'name', 'category', 'content'];
 
 
 
-export {taskList, categoryIcon, controls};
+export {taskList, categories, categoryIcon, controls};

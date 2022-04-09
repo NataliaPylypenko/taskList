@@ -1,27 +1,30 @@
 // JS
 
-import getTaskList from "./modules/getTaskList";
-import addTaskRow from "./modules/addTaskRow";
-import delTaskRow from "./modules/delTaskRow";
-import editTaskRow from "./modules/editTaskRow";
-import arhiveTaskRow from "./modules/arhiveTaskRow";
-import unarhiveTasks from "./modules/unarhiveTasks";
+import renderTaskTable from "./modules/renderTaskTable";
+import registerDelTaskItemHandler from "./modules/registerDelTaskItemHandler";
+import registerEditTaskItemHandler from "./modules/registerEditTaskItemHandler";
+import registerArchiveTaskItemHandler from "./modules/registerArchiveTaskItemHandler";
+import unarchiveTasks from "./modules/unarchiveTasks";
 
-import getPivotTable from "./modules/getPivotTable";
+import renderSummaryTable from "./modules/renderSummaryTable";
+
+import submitFormHandler from "./modules/submitFormHandler";
 
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    getTaskList();
-    addTaskRow();
-    delTaskRow();
-    editTaskRow();
-    arhiveTaskRow();
-    unarhiveTasks();
+    submitFormHandler();
 
-    getPivotTable();
+    renderTaskTable();
+    registerDelTaskItemHandler();
+    registerEditTaskItemHandler();
+    registerArchiveTaskItemHandler();
+    unarchiveTasks();
+
+    renderSummaryTable();
 
 });
+
 
 // SCSS
 import '../scss/style.scss'

@@ -19,7 +19,6 @@ module.exports = {
   },
   entry: {
     // module: `${PATHS.src}/your-module.js`,
-    // libs: `${PATHS.src}/js`,
     common: `${PATHS.src}/js/common.js`
   },
   output: {
@@ -73,18 +72,6 @@ module.exports = {
         ]
       },
     ]
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          name: 'vendors',
-          test: /node_modules/,
-          chunks: 'all',
-          enforce: true
-        },
-      }
-    }
   },
   plugins: [
     new MiniCssExtractPlugin({

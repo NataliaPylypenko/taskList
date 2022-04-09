@@ -1,6 +1,6 @@
 import {getCategoryIcon} from "./functions";
 
-function displayPivotTable(pivotItem) {
+function renderSummaryItem(pivotItem) {
 
     const parent = document.querySelector('.table-pivot .content');
 
@@ -22,4 +22,4 @@ function displayPivotTable(pivotItem) {
     parent.append(element);
 };
 
-export default displayPivotTable;
+export default renderSummaryItem;

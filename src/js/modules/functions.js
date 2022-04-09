@@ -1,8 +1,34 @@
-import {categoryIcon} from "./data";
+import {categories, categoryIcon, taskList} from "./data";
 import moment from "moment";
 
 function getCategoryIcon(category) {
+
     return categoryIcon.find(elem => elem.name === category).icon
+
+}
+
+function getRandomId() {
+
+    let result = '';
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < 6; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+
+}
+
+function getPivotItems() {
+
+    const start = categories.map(category => ({category, active: 0, archived: 0}));
+
+    return taskList.reduce((acc, p) => {
+        const idx = start.findIndex(item => item.category === p.category);
+        if (idx !== -1) start[idx][p.status]++
+        return start
+    }, start);
+
 }
 
 function dateParser(text) {
@@ -16,14 +42,14 @@ function dateParser(text) {
     return results;
 }
 
-function getRandomId() {
-    let result = '';
-    let characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-    let charactersLength = characters.length;
-    for (let i = 0; i < 6; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
+function clear(className) {
+    return document.querySelector(`${className} .content`).innerHTML = '';
 }
 
-export {getCategoryIcon, dateParser, getRandomId}
+function getTaskIndexById(id) {
+    const idx = taskList.findIndex(elem => elem.id === id);
+    if(idx === -1) throw new Error('Task item not found')
+    return idx
+}
+
+export {getCategoryIcon, getRandomId, getPivotItems, dateParser, clear, getTaskIndexById}
