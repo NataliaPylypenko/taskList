@@ -1,10 +1,10 @@
-import {taskList} from "./data";
+import {tableMain, taskList} from "./data";
 import {getTaskIndexById} from "./functions";
 import renderSummaryTable from "./renderSummaryTable";
 
 function registerDelTaskItemHandler() {
 
-    document.querySelector('.table-main').addEventListener('click', (e) => {
+    tableMain.addEventListener('click', e => {
         try {
             if (e.target && e.target.closest('.btn-del')) {
 

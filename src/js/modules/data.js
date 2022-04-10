@@ -83,7 +83,6 @@ const categoryIcon = [
 
 const controls = ['id', 'name', 'category', 'content'];
 
+const tableMain = document.querySelector('.table-main');
 
-
-
-export {taskList, categories, categoryIcon, controls};
+export {taskList, categories, categoryIcon, controls, tableMain};

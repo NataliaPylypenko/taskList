@@ -19,7 +19,7 @@ function getRandomId() {
 
 }
 
-function getPivotItems() {
+function getSummaryItem() {
 
     const start = categories.map(category => ({category, active: 0, archived: 0}));
 
@@ -52,4 +52,4 @@ function getTaskIndexById(id) {
     return idx
 }
 
-export {getCategoryIcon, getRandomId, getPivotItems, dateParser, clear, getTaskIndexById}
+export {getCategoryIcon, getRandomId, getSummaryItem, dateParser, clear, getTaskIndexById}

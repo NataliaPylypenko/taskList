@@ -1,4 +1,4 @@
-import {controls, taskList} from "./data";
+import {controls} from "./data";
 import createTodoItem from "./createTodoItem";
 import updateTaskItem from "./updateTaskItem";
 import renderSummaryTable from "./renderSummaryTable";
@@ -8,7 +8,6 @@ function submitFormHandler() {
     const form = document.querySelector('form');
 
     form.addEventListener('submit', e => {
-
         e.preventDefault();
 
         const formData = {};

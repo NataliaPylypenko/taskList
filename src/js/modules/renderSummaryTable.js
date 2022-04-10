@@ -1,13 +1,13 @@
-import {getPivotItems, clear} from "./functions";
+import {getSummaryItem, clear} from "./functions";
 import renderSummaryItem from "./renderSummaryItem";
 
 function renderSummaryTable() {
 
-    clear('.table-pivot');
+    clear('.table-summary');
 
-    getPivotItems().forEach(pivotItem => {
+    getSummaryItem().forEach(summaryItem => {
 
-        renderSummaryItem(pivotItem);
+        renderSummaryItem(summaryItem);
 
     });
 }

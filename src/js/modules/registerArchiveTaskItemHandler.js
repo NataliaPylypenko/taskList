@@ -1,19 +1,20 @@
-import {controls, taskList} from "./data";
+import {tableMain, taskList} from "./data";
 import renderSummaryTable from "./renderSummaryTable";
 import {getTaskIndexById} from "./functions";
 
 function registerArchiveTaskItemHandler() {
 
-    document.querySelector('.table-main').addEventListener('click', (e) => {
+    tableMain.addEventListener('click', e => {
         try {
             if (e.target && e.target.closest('.btn-archive')) {
 
                 const id = e.target.closest('.btn-archive').dataset.id;
 
-                taskList[getTaskIndexById(id)]['status'] = 'archived';
+                const task = taskList[getTaskIndexById(id)];
 
-                e.target.closest('.note-item').classList.add('archived');
-                e.target.closest('.note-item').classList.remove('active');
+                task['status'] = task['status'] === 'archived' ? 'active' : 'archived';
+
+                e.target.closest('.note-item').style.display = "none";
 
                 renderSummaryTable();
             }
