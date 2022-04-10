@@ -3,19 +3,19 @@ import {getRandomId} from "./functions";
 import renderTaskItem from "./renderTaskItem";
 import moment from 'moment';
 
-function createTodoItem(formData) {
+function createTaskItem(formData) {
 
-    const todoItem = {
+    const taskItem = {
         ...formData,
         id: getRandomId(),
         created: moment().format('MMMM DD, YYYY'),
         status: "active"
     };
 
-    taskList.push(todoItem);
+    taskList.push(taskItem);
 
 
-    renderTaskItem(todoItem);
+    renderTaskItem(taskItem);
 }
 
-export default createTodoItem;
+export default createTaskItem;

@@ -1,12 +1,12 @@
-<h1>Todo List Project</h1>
+<h1>Task List Project</h1>
 
-* Production - https://nataliapylypenko.github.io/todo-list/
+* Production - https://nataliapylypenko.github.io/taskList/
 
 ## Build Setup:
 
 ``` bash
 # Download repository:
-git clone https://github.com/NataliaPylypenko/todo-list.git
+git clone https://github.com/NataliaPylypenko/taskList.git
 
 # Install dependencies:
 npm install

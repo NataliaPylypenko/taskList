@@ -1,14 +1,12 @@
 {
-  "name": "todo-list",
+  "name": "task-list",
   "version": "1.0.0",
-  "homepage": "https://nataliapylypenko.github.io/todo-list/",
+  "homepage": "https://nataliapylypenko.github.io/taskList/",
   "description": "first-task",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js",
-    "watch": "webpack-dev-server --open --config ./build/webpack.dev.conf.js --watch",
-    "deploy": "gh-pages -d web",
-    "predeploy": "npm run build"
+    "watch": "webpack-dev-server --open --config ./build/webpack.dev.conf.js --watch"
   },
   "browserslist": [
     "> 1%",
@@ -39,7 +37,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "gh-pages": "^3.2.3",
     "moment": "^2.29.2"
   }
 }

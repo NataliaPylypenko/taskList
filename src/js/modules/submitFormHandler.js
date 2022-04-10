@@ -1,5 +1,5 @@
 import {controls} from "./data";
-import createTodoItem from "./createTodoItem";
+import createTaskItem from "./createTaskItem";
 import updateTaskItem from "./updateTaskItem";
 import renderSummaryTable from "./renderSummaryTable";
 
@@ -17,7 +17,7 @@ function submitFormHandler() {
 
         const id = e.target['id'].value;
 
-        id.length ? updateTaskItem(formData, id) : createTodoItem(formData)
+        id.length ? updateTaskItem(formData, id) : createTaskItem(formData)
 
         resetForm(form)
         renderSummaryTable();
