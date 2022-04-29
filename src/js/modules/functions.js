@@ -1,13 +1,13 @@
 import {categories, categoryIcon, taskList} from "./data";
 import moment from "moment";
 
-function getCategoryIcon(category) {
+export function getCategoryIcon(category) {
 
     return categoryIcon.find(elem => elem.name === category).icon
 
 }
 
-function getRandomId() {
+export function getRandomId() {
 
     let result = '';
     const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -19,7 +19,7 @@ function getRandomId() {
 
 }
 
-function getSummaryItem() {
+export function getSummaryItem() {
 
     const start = categories.map(category => ({category, active: 0, archived: 0}));
 
@@ -31,7 +31,7 @@ function getSummaryItem() {
 
 }
 
-function dateParser(text) {
+export function dateParser(text) {
     const regexDate = new RegExp('\\d{0,2}\\/\\d{0,2}\\/\\d{4}', 'g');
     const results = [];
 
@@ -42,14 +42,20 @@ function dateParser(text) {
     return results;
 }
 
-function clear(className) {
+export function clear(className) {
     return document.querySelector(`${className} .content`).innerHTML = '';
 }
 
-function getTaskIndexById(id) {
+export function getTaskIndexById(id) {
     const idx = taskList.findIndex(elem => elem.id === id);
     if(idx === -1) throw new Error('Task item not found')
     return idx
 }
 
-export {getCategoryIcon, getRandomId, getSummaryItem, dateParser, clear, getTaskIndexById}
+const byField = (field) => {
+    return (a, b) => a[field] > b[field] ? 1 : -1;
+}
+
+export const sortByObj = (data, field) => {
+    return data.sort(byField(field));
+}
